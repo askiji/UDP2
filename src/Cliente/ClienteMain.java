@@ -9,9 +9,10 @@ public class ClienteMain {
 		DatagramSocket socket;
 		InetAddress address;
 		try {
+			socket = new DatagramSocket();
+			address=InetAddress.getByName("localhost");
+			new RecepcionPaquete(socket).start();
 			do {
-				socket = new DatagramSocket();
-				address=InetAddress.getByName("localhost");
 				EnvioPaquete ep = new EnvioPaquete();
 				socket.send(ep.enviarPaquete(socket, address));
 			} while (true);

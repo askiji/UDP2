@@ -31,15 +31,12 @@ public class Paquete extends Thread{
 		
 	}
 	 public void paquetesParaTodos(String texto, InetAddress addres, int puerto) {
-//			mensaje_bytes = new byte[256];
-//			paquete= new DatagramPacket(mensaje_bytes,256);
 			try {
 				this.socket = new DatagramSocket();
 				mensaje = new String(texto.getBytes());
 				paquete = new DatagramPacket(texto.getBytes(), texto.length(), addres , puerto);
 				this.socket.send(paquete);
 				
-				System.out.println("PAQUETE");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

@@ -6,9 +6,6 @@ import java.util.HashMap;
 import java.util.function.BiConsumer;
 
 public class Puertos {
-//	public static BiConsumer<InetAddress , Integer> interPuertos = (a, b) -> {
-//		
-//	};
 	public static HashMap<Integer,InetAddress> interPuertos = new HashMap<>();
 
 	public static void saveAddresPort(InetAddress direccion ,Integer puerto ) {

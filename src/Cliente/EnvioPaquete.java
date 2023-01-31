@@ -22,9 +22,6 @@ public class EnvioPaquete {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
 		return paquete;
-				
-		
 	}
 }

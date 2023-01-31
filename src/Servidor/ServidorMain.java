@@ -14,7 +14,6 @@ public class ServidorMain {
 			do {
 				Paquete p = new Paquete();
 				Puertos.interPuertos.putAll(p.infoPaquete(socket));
-				System.out.println(Puertos.interPuertos.size());
 				
 			} while (true);
 		} catch (Exception e) {
